@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Barcode Scanner
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Ejemplo usando el plugin Barcode Scanner</h3>
+  <div class="result" *ngIf="result">Texto escaneado: <strong>{{result}}</strong></div>
+
+  <button *ngIf="result !=''" ion-button color="primary" (click)="scanner()">Escanear</button>
+  <button *ngIf="result" ion-button color="primary" (click)="scanner()">Escanear de nuevo</button>
+  <p text-justify>
+    Si quieres obtener más información del plugin, puedes visitar la documentación oficial siguiendo este enlace: <a href="https://ionicframework.com/docs/v3/native/barcode-scanner/">QR Scanner</a>
+  </p>
+</ion-content>
